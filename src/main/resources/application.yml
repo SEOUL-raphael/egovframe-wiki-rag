@@ -1,0 +1,20 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  profiles:
+    default: chat-model
+  http:
+    client:
+      connect-timeout: 5s
+      read-timeout: 120s
+  main:
+    web-application-type: none
+    banner-mode: off
+wiki:
+  sources: examples/sources
+  workspace: workspace
+  action: help
+logging:
+  level:
+    root: WARN
+    org.springframework: WARN
